@@ -19,7 +19,7 @@ const getUsers=async()=>{
     const emails=data.map((n)=>n.email)
     console.log(emails);
 }
-getUsers() 
+getUsers()  
 
 
 
