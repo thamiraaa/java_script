@@ -1,9 +1,12 @@
 import React from "react";
 import {Button} from "@/components/ui/button";
-import {useState} from "react";
+import {useEffect,useState} from "react";
 const Count = () => { 
   const [count,setCount] = useState(0);
   const [isVisible,setIsVisible] = useState(true);
+  useEffect(() => {
+    console.log("From useEffect");
+  }, [])
 return(
   <div>
     <h3>Count: {count}</h3>
