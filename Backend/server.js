@@ -1,0 +1,15 @@
+const express = require('express');
+const app = express();
+require ('dotenv').config()
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_URL)
+        .then(() => console.log('Connected to MongoDB'))
+        .catch(err => console.error('Could not connect to MongoDB', err));
+
+app.get('/', (req, res) => {
+    res.send('Get api working');
+});
+
+app.listen(3000, () => {
+    console.log(`Server is running on 3000`);
+});
